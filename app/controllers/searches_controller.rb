@@ -3,6 +3,7 @@ class SearchesController < ApplicationController
   end
 
   def create
+    # raise.text "hello"
     render nothing: true
   end
 end

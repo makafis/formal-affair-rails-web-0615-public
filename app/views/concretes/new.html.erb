@@ -1,1 +1,16 @@
-<!-- Your form goes here! -->
+<%= form_tag("/concretes") do %>
+<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+  <%= label_tag('concrete[mix_type]', "Mix Type") %>
+  <%= text_field_tag('concrete[mix_type]') %>
+
+  <%= label_tag('concrete[color]', "color") %>
+  <%= text_field_tag('concrete[color]') %>
+
+  <%= label_tag('concrete[psi]', "PSI") %>
+  <%= text_field_tag('concrete[psi]') %>
+
+  <%= label_tag('concrete[cost_per_yard]', "Cost Per Yard") %>
+  <%= text_field_tag('concrete[cost_per_yard]') %>
+
+  <%= submit_tag "Create Concrete" %>
+<% end %>
